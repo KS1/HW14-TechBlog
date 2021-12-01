@@ -1,0 +1,18 @@
+dbms,TABLE_SCHEMA,TABLE_NAME,COLUMN_NAME,ORDINAL_POSITION,DATA_TYPE,CHARACTER_MAXIMUM_LENGTH,CONSTRAINT_TYPE,REFERENCED_TABLE_SCHEMA,REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME
+mysql,techblog_db,user,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+mysql,techblog_db,user,name,2,varchar,255,NULL,NULL,NULL,NULL
+mysql,techblog_db,user,email,3,varchar,255,UNIQUE,NULL,NULL,NULL
+mysql,techblog_db,user,password,4,varchar,255,NULL,NULL,NULL,NULL
+mysql,techblog_db,post,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+mysql,techblog_db,post,title,2,varchar,255,NULL,NULL,NULL,NULL
+mysql,techblog_db,post,content,3,text,65535,NULL,NULL,NULL,NULL
+mysql,techblog_db,post,user_id,4,int,NULL,FOREIGN KEY,techblog_db,user,id
+mysql,techblog_db,comment,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+mysql,techblog_db,comment,comment_text,2,text,65535,NULL,NULL,NULL,NULL
+mysql,techblog_db,comment,user_id,3,int,NULL,FOREIGN KEY,techblog_db,user,id
+mysql,techblog_db,comment,post_id,4,int,NULL,FOREIGN KEY,techblog_db,post,id
+mysql,techblog_db,session,sid,1,varchar,36,PRIMARY KEY,NULL,NULL,NULL
+mysql,techblog_db,session,expires,2,datetime,NULL,NULL,NULL,NULL,NULL
+mysql,techblog_db,session,data,3,text,65535,NULL,NULL,NULL,NULL
+mysql,techblog_db,session,createdAt,4,datetime,NULL,NULL,NULL,NULL,NULL
+mysql,techblog_db,session,updatedAt,5,datetime,NULL,NULL,NULL,NULL,NULL

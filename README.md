@@ -26,7 +26,7 @@ This exercise requires the following npm modules
 | Description       | Link                                         |
 | ----------------- | -------------------------------------------- |
 | github repo       | https://github.com/KS1/HW14-TechBlog |
-| heroku deployment |      |
+| heroku deployment | https://kar1techblog.herokuapp.com/     |
 
 # Routes
 
